@@ -21,7 +21,7 @@ repository               : "AnanyaHN27/ananyahn27.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile_pic.PNG"
+  avatar           : "profile_pic.png"
   name             : "Ananya Hari Narain"
   pronouns         : # example: "she/her"  
   bio              : "Software Engineer at Ocado \n Computer Science Graduate from University of Cambridge"
