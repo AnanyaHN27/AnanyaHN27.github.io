@@ -7,28 +7,54 @@ redirect_from:
   - /wordpress/blog-posts/
 ---
 
-A decoder-only foundation model for time-series forecasting
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Series Forecasting with Decoder-Only Foundation Model</title>
+</head>
+<body>
 
-- Time series forecasting model
-- Trying to adopt a more zero-shot model for training
-- The idea is that we can pretrain a model on multiple different time series datasets (both real and synthetic) and then given a time series it can predict for a given horizon (prediction length)
-- The issue? We won’t know the history length (context) and number of horizons for an unknown model. We also have to contend with varying sizes with the pretraining corpus
-- TimesFM has an architecture that facilitates this- we use a decoder only training architecture. What does this mean? We freeze the encoder, so we don’t apply weights to the inputs. In essence this means that we can capture more general information.
-    - Given a sequence of input patches, the model predicts the next patch as a function of all past patches
-- Use of patching (notably the performance eclipses PatchTST on some datasets), we combine multiple time steps into one ‘patch’
-- The more patches we have, the fewer ‘tokens’ to process so the faster the training, but if we have very large patches it would force us into an encoder training model (6.2)
-- We can’t predict the whole horizon in one go as we don’t necessarily know the horizon length up front like with zero shot forecasting
-    - Input-output patch length: Input patches are shorter (e.g., 32 time-points), while output patches for prediction are longer (e.g., 128 time-points).
-    - Training approach: The model is trained to forecast future time-steps by simultaneously learning to use shorter input patches to predict longer output patches.
-    - Inference process: During inference, the model predicts future time-steps by generating predictions for longer future segments, then using these predictions as additional input to forecast subsequent time-steps.
-    - Trade-off: While this approach reduces the number of auto-regressive generation steps needed during prediction, there's a trade-off. If the output patch length is too long, it can be challenging to handle shorter time-series in the data effectively.
-- We also use random patch masking so that we don’t only predict well for input context lengths that are multiples of the patch length.
+<h1>A decoder-only foundation model for time-series forecasting</h1>
 
-Model:
+<ul>
+    <li>This is a time series forecasting model</li>
+    <li>The goal of this was to adopt a more zero-shot model for training</li>
+    <li>The idea is that we can pretrain a model on multiple different time series datasets (both real and synthetic) and then given a time series it can predict for a given horizon (or prediction length).</li>
+    <li>The issue? We won’t know the history length (or context) and number of horizons for an unknown model. We also have to contend with varying sizes with the pretraining corpus.</li>
+    <li>TimesFM has an architecture that facilitates this; we use a decoder only training architecture. What does this mean? We freeze the encoder, so we don’t apply weights to the inputs. In essence this means that we can capture more general information.
+        <ul>
+            <li>Given a sequence of input patches, the model predicts the next patch as a function of all past patches.</li>
+        </ul>
+    </li>
+    <li>Use of patching (notably the performance eclipses PatchTST on some datasets), we combine multiple time steps into one ‘patch’.</li>
+    <li>The more patches we have, the fewer ‘tokens’ to process so the faster the training, but if we have very large patches it would force us into an encoder training model.</li>
+    <li>We can’t predict the whole horizon in one go as we don’t necessarily know the horizon length up front like with zero shot forecasting. There are some neat things we can do with patches.
+        <ul>
+            <li>Input-output patch length: Input patches are shorter (e.g., 32 time-points), while output patches for prediction are longer (e.g., 128 time-points).</li>
+            <li>Training approach: The model is trained to forecast future time-steps by simultaneously learning to use shorter input patches to predict longer output patches.</li>
+            <li>Inference process: During inference, the model predicts future time-steps by generating predictions for longer future segments, then using these predictions as additional input to forecast subsequent time-steps.</li>
+            <li>Trade-off: While this approach reduces the number of auto-regressive generation steps needed during prediction, there's a trade-off. If the output patch length is too long, it can be challenging to handle shorter time-series in the data effectively.</li>
+        </ul>
+    </li>
+    <li>We also use random patch masking so that we don’t only predict well for input context lengths that are multiples of the patch length.</li>
+</ul>
 
-- Input: non overlapping patches, each patch + mask is processed by Residual Block (Multi-layer Perceptron + hidden layer + skip connection)
-- N transformer layers that have a multi-head self attention mechanism followed by a feed-forward network (FFN) with causal attention so that each output is only looking at tokens prior to it (each time step is only influenced by the past, unlike in NLP)
-- USING MSE loss function for point forecasting, maximum likelihood loss for probabilistic loss
+<h2>Model:</h2>
 
-Conclusion:
-- Lower sample MAE than many other models
+<ul>
+    <li>Input: non overlapping patches, each patch + mask is processed by Residual Block (Multi-layer Perceptron + hidden layer + skip connection)</li>
+    <li>N transformer layers that have a multi-head self attention mechanism followed by a feed-forward network (FFN) with causal attention so that each output is only looking at tokens prior to it (each time step is only influenced by the past, unlike in NLP)</li>
+    <li>USING MSE loss function for point forecasting, maximum likelihood loss for probabilistic loss</li>
+</ul>
+
+<h2>Conclusion:</h2>
+
+<ul>
+    <li>TimesFM has a lower sample MAE than many other models</li>
+</ul>
+
+</body>
+</html>
+
