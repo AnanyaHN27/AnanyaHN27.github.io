@@ -15,7 +15,7 @@ redirect_from:
     <title>Time Series Forecasting with Decoder-Only Foundation Model</title>
 </head>
 <body>
-
+<article>
 <h1>A decoder-only foundation model for time-series forecasting</h1>
 
 <ul>
@@ -54,7 +54,17 @@ redirect_from:
 <ul>
     <li>TimesFM has a lower sample MAE than many other models</li>
 </ul>
-
+</article>
+<article>
+    <h1>Revolutionizing Ride ETA Estimates: Inside Uber's DeepETA Model</h1>
+    <p>In the world of transportation, accurately estimating arrival times (ETA) is crucial. Traditionally, ETA calculations have relied on weighted graph models, where nodes represent locations and edges represent paths between them. However, these models may falter due to real-time variations like traffic conditions and driver routes.</p>
+    <p>Uber's innovative solution, DeepETA, leverages machine learning to bridge this gap between theoretical models and real-world complexities. Unlike its predecessors, DeepETA is a post-processing model that enhances traditional shortest path algorithms with spatial and temporal insights.</p>
+    <p>DeepETA's architecture features an encoder-decoder framework with self-attention mechanisms, omitting positional encodings in favour of bucketization to discretize continuous features. Geospatial data is a cornerstone, quantized by latitude and longitude coordinates and compressed using embeddings for efficiency.</p>
+    <p>Efficiency is key, achieved through a linear transformer architecture and the kernel trick to avoid computing entire attention matrices. DeepETA utilises feature sparsity and parameterization to optimise computational speed while maintaining accuracy.</p>
+    <p>The decoder component incorporates bias layers to adjust predictions for different trip segments, ensuring reliability and realism. ReLU activation enforces non-negativity, while clamping mitigates extreme values.</p>
+    <p>Handling outliers is critical, addressed by an asymmetric Huber loss function that balances accuracy and robustness across various trip scenarios.</p>
+    <p>In summary, DeepETA revolutionises ETA predictions by seamlessly integrating machine learning with spatial-temporal dynamics, ensuring precise and efficient estimations for Uber users.</p>
+  </article>
 </body>
 </html>
 
