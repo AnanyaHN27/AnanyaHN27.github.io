@@ -31,6 +31,7 @@ const Portfolio = () => {
   );
 
   return (
+    <Router basename={process.env.PUBLIC_URL}>
     <div className="min-h-screen bg-gray-50 text-lg">
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 bg-white border-b z-50">
@@ -341,6 +342,7 @@ const Portfolio = () => {
         </div>
       </main>
     </div>
+    </Router>
   );
 };
 
