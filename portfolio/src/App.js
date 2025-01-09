@@ -109,24 +109,36 @@ const Portfolio = () => {
                   with a strong background in developing ML models and optimizing data pipelines.
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
-                  <div className="bg-gray-50 p-4 rounded-lg">
+                  <div className="space-y-4">
                     <h3 className="font-semibold text-gray-800 mb-2">Education</h3>
-                    <p className="text-gray-600">MS in Applied Data Science</p>
-                    <p className="text-gray-500">Carnegie Mellon University</p>
-                    <p className="text-gray-600">BA in Computer Science</p>
-                    <p className="text-gray-500">University of Cambridge</p>
+                    <div className="bg-gray-50 p-4 rounded-lg">
+                      <p className="text-gray-600">MS in Applied Data Science</p>
+                      <p className="text-gray-500">Carnegie Mellon University</p>
+                    </div>
+                    <div className="bg-gray-50 p-4 rounded-lg">
+                      <p className="text-gray-600">BA in Computer Science</p>
+                      <p className="text-gray-500">University of Cambridge</p>
+                    </div>
                   </div>
-                  <div className="bg-gray-50 p-4 rounded-lg">
+                  <div className="space-y-4">
                     <h3 className="font-semibold text-gray-800 mb-2">Experience</h3>
-                    <p className="text-gray-600">Data Scientist</p>
-                    <p className="text-gray-500">Ocado Technology</p>
-                    <p className="text-gray-600">Software Engineer</p>
-                    <p className="text-gray-500">Ocado Technology</p>
-                    <p className="text-gray-600">NLP Research Intern</p>
-                    <p className="text-gray-500">TechWolf</p>
-                    <p className="text-gray-600">Software Research Intern</p>
-                    <p className="text-gray-500">University of Cambridge</p>
-                  </div>
+                    <div className="bg-gray-50 p-4 rounded-lg">
+                      <p className="text-gray-600">Data Scientist</p>
+                      <p className="text-gray-500">Ocado Technology</p>
+                    </div>
+                    <div className="bg-gray-50 p-4 rounded-lg">
+                      <p className="text-gray-600">Software Engineer</p>
+                      <p className="text-gray-500">Ocado Technology</p>
+                    </div>
+                    <div className="bg-gray-50 p-4 rounded-lg">
+                      <p className="text-gray-600">NLP Research Intern</p>
+                      <p className="text-gray-500">TechWolf</p>
+                    </div>
+                    <div className="bg-gray-50 p-4 rounded-lg">
+                      <p className="text-gray-600">Software Research Intern</p>
+                      <p className="text-gray-500">University of Cambridge</p>
+                    </div>
+                </div>
                 </div>
               </div>
             </div>
@@ -149,9 +161,11 @@ const Portfolio = () => {
                       </div>
                       <p className="text-lg text-gray-600">Ocado Technology</p>
                       <ul className="mt-2 text-lg text-gray-600 list-disc list-inside">
-                        <li>Developed TFT, RNN, and TCN models for time series forecasting</li>
-                        <li>Enhanced stock demand prediction, saving £2M during Christmas period</li>
-                        <li>Conducted A/B testing and statistical analysis</li>
+                      <li>Worked as a Data Scientist using Python, TensorFlow, and SQL to create Temporal Fusion Transformers (TFT), Recurrent Neural Networks (RNN), and Temporal Convolutional Networks (TCN) models for complex time-series forecasting of stock demand.</li>
+                      <li>Conducted A/B testing and statistical data analysis of model features for evaluation prior to deployment, updating relevant Looker Studio dashboards with key metrics.</li>
+                      <li>Achieved 2nd place in an internal hackathon with an XGBoost model designed to flag incorrect SKU attributes and perform anomaly detection, achieving 87% recall using Computer Vision techniques.</li>
+                      <li>Implemented a feature in production mathematical models using TensorFlow, saving £2 million over the Christmas period and improving performance over the baseline.</li>
+                      <li>Actively participated in in-house research groups, contributing to journal club discussions by reading academic research papers to learn new machine learning frameworks and optimization algorithms.</li>
                       </ul>
                     </div>
 
@@ -162,9 +176,24 @@ const Portfolio = () => {
                       </div>
                       <p className="text-lg text-gray-600">Ocado Technology</p>
                       <ul className="mt-2 text-lg text-gray-600 list-disc list-inside">
-                        <li>Optimized routing algorithms with Discrete Event Simulation</li>
-                        <li>Led fullstack development with React</li>
-                        <li>Tech Lead for integration project</li>
+                      <li>Developed and optimized routing algorithms using Java, enhancing delivery efficiency in sparse geographies with Discrete Event Simulation.</li>
+                      <li>Led full-stack development, working with React to improve web app usability, reduce test runtimes by 65%, and increase code coverage from 82% to 98%.</li>
+                      <li>Served as Tech Lead for integration projects, managing roadmaps, facilitating cross-team collaboration, and delivering key features that improved operational visibility in logistics with Python visualizations.</li>
+                      <li>Implemented AI algorithms to optimize user experience and autowired a 100,000+ line Spring Boot codebase, boosting system performance.</li>
+                      <li>Engaged in client-facing presentations, designed APIs, and provided architectural guidance through large-scale Architectural Katas focused on microservices.</li>
+                      </ul>
+                    </div>
+
+                    <div className="border-l-4 border-teal-500 pl-4">
+                      <div className="flex justify-between items-start">
+                        <h4 className="font-semibold text-gray-800">NLP Research Intern</h4>
+                        <span className="text-sm text-gray-500">July 2021 – Sept. 2021</span>
+                      </div>
+                      <p className="text-lg text-gray-600">Ocado Technology</p>
+                      <ul className="mt-2 text-lg text-gray-600 list-disc list-inside">
+                      <li>Researched and implemented a Poincare model to learn hierarchies in an unsupervised manner as part of solo project, building custom data pipelines to do so.</li>
+                      <li>Obtained accuracy scores of 87.3%, leading to use in production environments.
+                      </li>
                       </ul>
                     </div>
                   </div>
@@ -227,6 +256,11 @@ const Portfolio = () => {
                     title: 'Diffusion Model',
                     description: 'Developed UNet-based diffusion models for image generation using TensorFlow.',
                     tech: ['TensorFlow', 'Deep Learning', 'Computer Vision']
+                  },
+                  {
+                    title: 'Data Pipeline: CMS Hospital Data',
+                    description: 'Developed a data pipeline and Streamlit application for efficient and scalable processing of large datasets and seamless data visualization.',
+                    tech: ['PostgreSQL', 'Python', 'Streamlit']
                   },
                   {
                     title: 'Podcast Summaries Generation',
