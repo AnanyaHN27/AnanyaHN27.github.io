@@ -31,12 +31,12 @@ const Portfolio = () => {
   );
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 text-lg">
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 bg-white border-b z-50">
         <div className="max-w-6xl mx-auto px-4">
           <div className="flex justify-between items-center h-16">
-            <span className="text-xl font-bold text-navy-800">Ananya Hari Narain</span>
+          <span className="text-2xl font-bold text-navy-800">Ananya Hari Narain</span>
             
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -45,7 +45,7 @@ const Portfolio = () => {
               {isMenuOpen ? <X /> : <Menu />}
             </button>
 
-            <div className="hidden md:flex gap-4">
+            <div className="hidden md:flex gap-4 text-lg">
               <NavLink section="home" icon={Home} text="Home" />
               <NavLink section="resume" icon={BookOpen} text="Resume" />
               <NavLink section="portfolio" icon={Code} text="Portfolio" />
@@ -55,7 +55,7 @@ const Portfolio = () => {
         </div>
 
         {isMenuOpen && (
-          <div className="md:hidden border-t">
+          <div className="md:hidden border-t text-lg">
             <div className="flex flex-col p-4 gap-2">
               <NavLink section="home" icon={Home} text="Home" />
               <NavLink section="resume" icon={BookOpen} text="Resume" />
@@ -77,8 +77,8 @@ const Portfolio = () => {
                   alt="Profile"
                   className="mx-auto rounded-full"
                 />
-                <h1 className="text-4xl font-bold text-gray-900">Ananya Hari Narain</h1>
-                <p className="text-xl text-gray-600">Data Scientist & ML Engineer</p>
+                <h1 className="text-5xl font-bold text-gray-900">Ananya Hari Narain</h1>
+                <p className="text-2xl text-gray-600">Data Scientist & ML Engineer</p>
                 <div className="flex justify-center gap-4">
                   <a 
                     href="https://github.com/AnanyaHN27" 
@@ -102,8 +102,8 @@ const Portfolio = () => {
               </div>
 
               <div className="bg-white rounded-xl shadow-lg p-6 space-y-4">
-                <h2 className="text-2xl font-semibold text-gray-800">About Me</h2>
-                <p className="text-gray-600">
+                <h2 className="text-3xl font-semibold text-gray-800">About Me</h2>
+                <p className="text-xl text-gray-600">
                   Masters student in Applied Data Science at Carnegie Mellon University with experience 
                   in machine learning, NLP, and software engineering. Former Data Scientist at Ocado Technology 
                   with a strong background in developing ML models and optimizing data pipelines.
@@ -113,11 +113,19 @@ const Portfolio = () => {
                     <h3 className="font-semibold text-gray-800 mb-2">Education</h3>
                     <p className="text-gray-600">MS in Applied Data Science</p>
                     <p className="text-gray-500">Carnegie Mellon University</p>
+                    <p className="text-gray-600">BA in Computer Science</p>
+                    <p className="text-gray-500">University of Cambridge</p>
                   </div>
                   <div className="bg-gray-50 p-4 rounded-lg">
                     <h3 className="font-semibold text-gray-800 mb-2">Experience</h3>
                     <p className="text-gray-600">Data Scientist</p>
                     <p className="text-gray-500">Ocado Technology</p>
+                    <p className="text-gray-600">Software Engineer</p>
+                    <p className="text-gray-500">Ocado Technology</p>
+                    <p className="text-gray-600">NLP Research Intern</p>
+                    <p className="text-gray-500">TechWolf</p>
+                    <p className="text-gray-600">Software Research Intern</p>
+                    <p className="text-gray-500">University of Cambridge</p>
                   </div>
                 </div>
               </div>
@@ -127,20 +135,20 @@ const Portfolio = () => {
           {/* Resume Section */}
           {activeSection === 'resume' && (
             <div className="space-y-8 animate-fadeIn">
-              <h2 className="text-3xl font-bold text-gray-900">Resume</h2>
+              <h2 className="text-4xl font-bold text-gray-900">Resume</h2>
               
               <div className="space-y-6">
                 <div className="bg-white rounded-xl shadow-lg p-6">
-                  <h3 className="text-xl font-semibold text-gray-800 mb-4">Experience</h3>
+                  <h3 className="text-2xl font-semibold text-gray-800 mb-4">Experience</h3>
                   
                   <div className="space-y-6">
                     <div className="border-l-4 border-teal-500 pl-4">
                       <div className="flex justify-between items-start">
-                        <h4 className="font-semibold text-gray-800">Data Scientist</h4>
-                        <span className="text-sm text-gray-500">Sept. 2023 – Aug. 2024</span>
+                        <h4 className="text-xl font-semibold text-gray-800">Data Scientist</h4>
+                        <span className="text-base text-gray-500">Sept. 2023 – Aug. 2024</span>
                       </div>
-                      <p className="text-gray-600">Ocado Technology</p>
-                      <ul className="mt-2 text-gray-600 list-disc list-inside">
+                      <p className="text-lg text-gray-600">Ocado Technology</p>
+                      <ul className="mt-2 text-lg text-gray-600 list-disc list-inside">
                         <li>Developed TFT, RNN, and TCN models for time series forecasting</li>
                         <li>Enhanced stock demand prediction, saving £2M during Christmas period</li>
                         <li>Conducted A/B testing and statistical analysis</li>
@@ -152,8 +160,8 @@ const Portfolio = () => {
                         <h4 className="font-semibold text-gray-800">Software Engineer</h4>
                         <span className="text-sm text-gray-500">Sept. 2022 – Sept. 2023</span>
                       </div>
-                      <p className="text-gray-600">Ocado Technology</p>
-                      <ul className="mt-2 text-gray-600 list-disc list-inside">
+                      <p className="text-lg text-gray-600">Ocado Technology</p>
+                      <ul className="mt-2 text-lg text-gray-600 list-disc list-inside">
                         <li>Optimized routing algorithms with Discrete Event Simulation</li>
                         <li>Led fullstack development with React</li>
                         <li>Tech Lead for integration project</li>
@@ -163,7 +171,7 @@ const Portfolio = () => {
                 </div>
 
                 <div className="bg-white rounded-xl shadow-lg p-6">
-                  <h3 className="text-xl font-semibold text-gray-800 mb-4">Education</h3>
+                  <h3 className="text-2xl font-semibold text-gray-800 mb-4">Education</h3>
                   <div className="space-y-4">
                     <div>
                       <h4 className="font-semibold text-gray-800">Carnegie Mellon University</h4>
@@ -179,7 +187,7 @@ const Portfolio = () => {
                 </div>
 
                 <div className="bg-white rounded-xl shadow-lg p-6">
-                  <h3 className="text-xl font-semibold text-gray-800 mb-4">Skills</h3>
+                  <h3 className="text-2xl font-semibold text-gray-800 mb-4">Skills</h3>
                   <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
                     {[
                       'Python', 'R', 'SQL', 'TensorFlow', 'PyTorch', 'Kubernetes',
@@ -201,7 +209,7 @@ const Portfolio = () => {
           {/* Portfolio Section */}
           {activeSection === 'portfolio' && (
             <div className="space-y-8 animate-fadeIn">
-              <h2 className="text-3xl font-bold text-gray-900">Portfolio</h2>
+              <h2 className="text-4xl font-bold text-gray-900">Portfolio</h2>
               
               <div className="grid md:grid-cols-2 gap-6">
                 {[
@@ -230,10 +238,10 @@ const Portfolio = () => {
                     key={project.title}
                     className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow"
                   >
-                    <h3 className="text-xl font-semibold text-gray-800 mb-2">
+                    <h3 className="text-2xl font-semibold text-gray-800 mb-2">
                       {project.title}
                     </h3>
-                    <p className="text-gray-600 mb-4">{project.description}</p>
+                    <p className="text-lg text-gray-600 mb-4">{project.description}</p>
                     <div className="flex flex-wrap gap-2">
                       {project.tech.map((tech) => (
                         <span
@@ -253,11 +261,11 @@ const Portfolio = () => {
           {/* Contact Section */}
           {activeSection === 'contact' && (
             <div className="space-y-8 animate-fadeIn">
-              <h2 className="text-3xl font-bold text-gray-900">Contact</h2>
+              <h2 className="text-4xl font-bold text-gray-900">Contact</h2>
               
               <div className="bg-white rounded-xl shadow-lg p-6">
                 <div className="mb-6">
-                  <p className="text-gray-600">
+                  <p className="text-lg text-gray-600">
                     Feel free to reach out to me at:{' '}
                     <a href="mailto:ananya.harinarain@gmail.com" className="text-teal-600 hover:text-teal-700">
                       ananya.harinarain@gmail.com
