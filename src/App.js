@@ -244,6 +244,11 @@ const Portfolio = () => {
               <div className="grid md:grid-cols-2 gap-6">
                 {[
                   {
+                    title: 'Snowflake and Mistral RAG n ROLL Hackathon: Environmental RAG Dashboard',
+                    description: 'Implemented a RAG application to power US environmental analysis and recommendations.',
+                    tech: ['Snowflake', 'Mistral', 'Streamlit']
+                  },
+                  {
                     title: 'CMU-GPT',
                     description: 'Implemented a CMU-specific LLM using RAG, LangChain, FAISS, and PyTorch for course recommendations.',
                     tech: ['PyTorch', 'LangChain', 'FAISS']
