@@ -305,7 +305,7 @@ const Portfolio = () => {
 
               <div className="bg-white rounded-xl shadow-lg p-8">
                 <h3 className="text-3xl font-semibold text-gray-800 mb-4">
-                  Capstone Project: Sparse Autoencoder for Enhanced RAG
+                  Practical ML Learnings: Sparse Autoencoder Implementaton 
                 </h3>
                 <div className="text-gray-600 text-lg space-y-4">
                   <p>
