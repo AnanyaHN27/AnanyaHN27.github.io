@@ -31,7 +31,6 @@ const Portfolio = () => {
   );
 
   return (
-    <Router basename={process.env.PUBLIC_URL}>
     <div className="min-h-screen bg-gray-50 text-lg">
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 bg-white border-b z-50">
@@ -50,6 +49,7 @@ const Portfolio = () => {
               <NavLink section="home" icon={Home} text="Home" />
               <NavLink section="resume" icon={BookOpen} text="Resume" />
               <NavLink section="portfolio" icon={Code} text="Portfolio" />
+              <NavLink section='blog' icon={BookOpen} text="Blog" />
               <NavLink section="contact" icon={Mail} text="Contact" />
             </div>
           </div>
@@ -74,9 +74,9 @@ const Portfolio = () => {
             <div className="space-y-8 animate-fadeIn">
               <div className="text-center space-y-4">
                 <img
-                  src="/api/placeholder/150/150"
+                  src="/images/ananya.jpg"
                   alt="Profile"
-                  className="mx-auto rounded-full"
+                  className="mx-auto rounded-full w-32 h-32"
                 />
                 <h1 className="text-5xl font-bold text-gray-900">Ananya Hari Narain</h1>
                 <p className="text-2xl text-gray-600">Data Scientist & ML Engineer</p>
@@ -298,6 +298,46 @@ const Portfolio = () => {
             </div>
           )}
 
+          {/* Blog Section */}
+          {activeSection === 'blog' && (
+            <div className="space-y-8 animate-fadeIn">
+              <h2 className="text-4xl font-bold text-gray-900">Blog</h2>
+
+              <div className="bg-white rounded-xl shadow-lg p-8">
+                <h3 className="text-3xl font-semibold text-gray-800 mb-4">
+                  Capstone Project: Sparse Autoencoder for Enhanced RAG
+                </h3>
+                <div className="text-gray-600 text-lg space-y-4">
+                  <p>
+                    As part of my MADS degree at CMU, I am working on a capstone project to create a SAE (Sparse Autoencoder) to interpret and identify features from LLM embeddings to enhance RAG retrieval mechanisms. This is in conjunction with a stealth mode startup and alongside a team of 2 other students.
+                  </p>
+                  <p>
+                    Taking ownership of the SAE code was an invaluable learning experience; this was my first time taking end-to-end ownership of a PyTorch model, and understanding the intricacies of the library was awesome. One of my favorite learnings was using batch processing with the inbuilt functions. <code>__iter__</code> called a function for processing only once <code>batch_size</code> elements had been loaded in. Using a combination of this and numpy arrays for vectorization sped up computation by 98x.
+                  </p>
+                  <p>
+                    There were many intricacies in trying to improve speed—with a dataset of 1M rows and a hidden dimensionality of about 2304, computation became expensive. I used the department GPUs to try and speed this up. Naively, I thought that setting <code>device = 'cuda' if torch.cuda.is_available() else 'cpu'</code> would be the fix, but there were a lot of nuances that I missed. All created tensors have to be explicitly set to the device, and there is the subcase where you still have to have CPU-efficient code if the model is to be run on a CPU.
+                  </p>
+                  <p>
+                    After much tinkering, I realized the smartest thing to do was to profile the code using <code>profile</code>. Wrapping the training loop with the profiling code, I found that the code wasn't GPU inefficient—there was simply too much CPU-GPU throttling. The dataset processing class, inheriting <code>torch.utils.data.Dataset</code>, led to 91% CPU utilization. Each time the training loop called another batch, the <code>__iter__</code> function I was proud of was throttling the GPU due to the padding and processing required.
+                  </p>
+                  <p>
+                    At this point, there were two options: either preprocess the dataset and save it in a pickle file or simply reduce the dataset size. Impatience got the better of me, and I reduced the dataset by a factor of 10, reducing epoch training time proportionally. I'd like to explore efficient dataset saving methods further. Another intricacy: torch Datasets apparently can only be CPU processed, or at least that's what the documentation led me to believe, meaning throwing resources at the problem was not feasible.
+                  </p>
+                  <p>
+                    If this has taught me anything, it's that there really is no substitute for <em>doing</em>. Tutorials and sterile environments can only take you so far—I never would have learned about the memory constraints and speedups without hands-on experience. I'd like to build a JavaScript dashboard, load a <code>.pth</code> model, and do visualizations. Tune in for my next blog post!
+                  </p>
+                  <p>
+                    Other fun learnings include:
+                  </p>
+                  <ul className="list-disc pl-8">
+                    <li>Using SSH extensively, copying files between my machine and server</li>
+                    <li>Using <code>ctrl-shift-6</code> to select large text blocks in nano</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          )}
+
           {/* Contact Section */}
           {activeSection === 'contact' && (
             <div className="space-y-8 animate-fadeIn">
@@ -347,7 +387,6 @@ const Portfolio = () => {
         </div>
       </main>
     </div>
-    </Router>
   );
 };
 
