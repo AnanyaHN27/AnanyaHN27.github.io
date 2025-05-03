@@ -302,7 +302,47 @@ const Portfolio = () => {
           {activeSection === 'blog' && (
             <div className="space-y-8 animate-fadeIn">
               <h2 className="text-4xl font-bold text-gray-900">Blog</h2>
-
+              <div className="bg-white rounded-xl shadow-lg p-8">
+              <h3 className="text-3xl font-semibold text-gray-800 mb-4">
+                How I Got Good at SQL (After Failing It)
+              </h3>
+              <div className="text-gray-600 text-lg space-y-4">
+                <p>
+                  If you're prepping for Data Science or Data Engineering interviews, chances are you’ll need to get good at SQL. In my first role (and during a university DB class), I really struggled with it — I chalked it up to “my brain just not working that way.” Fast forward a few years, and I somehow landed an offer from Meta as a Data Engineer.
+                </p>
+                <p>
+                  That still feels surreal. Back in 2020, I completely tanked my first-year mock exams at Cambridge. I genuinely didn’t think a future like this was possible.
+                </p>
+                <p>
+                  What changed? Two resources helped me the most:
+                </p>
+                <ul className="list-disc pl-8">
+                  <li><strong>Alex Reinhart’s “Data Engineering” course</strong></li>
+                  <li><strong>DataLemur (over Leetcode)</strong></li>
+                </ul>
+                <p>
+                  The Cambridge DB class was honestly not great. It focused on pseudocode and set-based logic rather than practical SQL. We never learned about PostgreSQL (which is the most popular paradigm in industry), or how to use `WHERE` vs `HAVING`, or even basic window functions. Instead, we were expected to jump straight from syntax to complex queries. Maybe that reflects more on how I learn, but it was a massive leap.
+                </p>
+                <p>
+                  In contrast, Alex Reinhart’s class was refreshingly hands-on. It emphasized incremental learning and practical problems. I highly recommend checking out his lecture notes on <a href="https://www.refsmmat.com">refsmmat.com</a>.
+                </p>
+                <p>
+                  As for problem practice, DataLemur wins hands down over Leetcode for SQL. The problems are better curated, have more meaningful hints, and the difficulty progression feels more thoughtful. Start with the Medium ones — if you can solve those comfortably, you can skip the Easy tier entirely.
+                </p>
+                <p>
+                  Focus areas that helped me the most:
+                </p>
+                <ul className="list-disc pl-8">
+                  <li>Types of joins and when to use them</li>
+                  <li>Date/time functions — these show up a lot in real-world problems</li>
+                  <li>Window functions, especially `ROW_NUMBER`, `RANK`, and `SUM` over partitions</li>
+                  <li>Grouping logic and filtering with `GROUP BY` + `HAVING`</li>
+                </ul>
+                <p>
+                  Mastery is a numbers game. Keep solving, keep pushing. Intuition builds over time. And yes, I’ve heard the same thing applies to Python Leetcode — it’s just a steeper hill to climb.
+                </p>
+              </div>
+    </div>
               <div className="bg-white rounded-xl shadow-lg p-8">
                 <h3 className="text-3xl font-semibold text-gray-800 mb-4">
                   Practical ML Learnings: Sparse Autoencoder Implementaton 
