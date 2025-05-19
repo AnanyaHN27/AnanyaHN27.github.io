@@ -75,7 +75,7 @@ const Portfolio = () => {
                 <img
                   src="/images/headshot.jpeg"
                   alt="Profile"
-                  className="mx-auto rounded-full"
+                  className="mx-auto rounded-full w-100 h-100"
                 />
                 <h1 className="text-5xl font-bold text-gray-900">Ananya Hari Narain</h1>
                 <p className="text-2xl text-gray-600">Data Engineer</p>
