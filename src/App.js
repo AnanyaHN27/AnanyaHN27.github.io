@@ -50,7 +50,6 @@ const Portfolio = () => {
               <NavLink section="resume" icon={BookOpen} text="Resume" />
               <NavLink section="portfolio" icon={Code} text="Portfolio" />
               <NavLink section='blog' icon={BookOpen} text="Blog" />
-              <NavLink section="contact" icon={Mail} text="Contact" />
             </div>
           </div>
         </div>
@@ -61,7 +60,7 @@ const Portfolio = () => {
               <NavLink section="home" icon={Home} text="Home" />
               <NavLink section="resume" icon={BookOpen} text="Resume" />
               <NavLink section="portfolio" icon={Code} text="Portfolio" />
-              <NavLink section="contact" icon={Mail} text="Contact" />
+              <NavLink section='blog' icon={BookOpen} text="Blog" />
             </div>
           </div>
         )}
@@ -74,7 +73,7 @@ const Portfolio = () => {
             <div className="space-y-8 animate-fadeIn">
               <div className="text-center space-y-4">
                 <img
-                  src="/images/ananya.jpg"
+                  src="/images/headshot.jpeg"
                   alt="Profile"
                   className="mx-auto rounded-full w-32 h-32"
                 />
