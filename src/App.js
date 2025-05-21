@@ -328,7 +328,7 @@ const Portfolio = () => {
 
   <p>I’m also committed to filling life with fun. I spent much of my childhood turning down invitations or canceling plans because of late-onset anxiety. I don’t want to be that person anymore.</p>
 
-  <p>So this blog is my little corner to reconnect with my lost hobbies, and share some of my insights wherever I can.</p>
+  <p>So this blog is my little corner to reconnect with my lost hobbies, and share some of my insights wherever I can. </p>
 
                 </div>
               </div>
