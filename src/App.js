@@ -334,7 +334,7 @@ const Portfolio = () => {
               </div>
               <div className="bg-white rounded-xl shadow-lg p-8">
               <h3 className="text-3xl font-semibold text-gray-800 mb-4">
-                How I Got Good at SQL (After Failing It)
+                How I Got Good at SQL (After Failing It) 
               </h3>
               <div className="text-gray-600 text-lg space-y-4">
                 <p>
