@@ -316,6 +316,23 @@ const Portfolio = () => {
             <div className="space-y-8 animate-fadeIn">
               <h2 className="text-4xl font-bold text-gray-900">Blog</h2>
               <div className="bg-white rounded-xl shadow-lg p-8">
+                <h3 className="text-3xl font-semibold text-gray-800 mb-4">
+                  Why I'm Starting This Blog 
+                </h3>
+                <div className="text-gray-600 text-lg space-y-4">
+                 <p>I’ve noticed that the people I admire most, the ones I see as technical experts or pinnacles of achievement, are rarely one-trick ponies. They have a mix of cool, varied interests and seem to fill their cups with more than just academic or professional wins. They always seem to have a fun fact on hand during icebreakers, and more often than not, they just come across as <em>cool</em>.</p>
+
+  <p>Lately, I’ve caught myself slipping into a loop. When I have spare time, my mind spins, looking for something to latch onto. I used to fill that time creatively, reading about random topics, making quirky lists, expressing myself. Now I find myself stuck in a scroll cycle, bouncing from TikTok to Instagram to Reddit to LinkedIn. It’s numbing, and I hate that I’m spending hours this way while the people around me are doing genuinely interesting things.</p>
+
+  <p>That’s where this blog comes in. I still love reading, and I used to love writing. I may not be the best writer, but putting thoughts into words feels like an oasis in a world drowning in short-form noise. It also engages a part of my brain that work rarely touches. Our careers are often siloed and specialized, and I hardly ever write extended prose anymore. But as Newton said, “an object in motion stays in motion.” I’m hoping that writing again, and exploring ideas outside of work, will spark more curiosity and lead to new creative habits.</p>
+
+  <p>I’m also committed to filling life with fun. I spent much of my childhood turning down invitations or canceling plans because of late-onset anxiety. I don’t want to be that person anymore.</p>
+
+  <p>So this blog is my little corner to reconnect with my lost hobbies, and share some of my insights wherever I can.</p>
+
+                </div>
+              </div>
+              <div className="bg-white rounded-xl shadow-lg p-8">
               <h3 className="text-3xl font-semibold text-gray-800 mb-4">
                 How I Got Good at SQL (After Failing It)
               </h3>
