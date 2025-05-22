@@ -260,7 +260,7 @@ const Portfolio = () => {
                     title: 'Sparse Autoencoder For Clustering Research Concepts',
                     description: 'Building and training Sparse Autoencoder (SAE) to extract interpretable latent features, and using LLMs to interpret these features.',
                     tech: ['PyTorch', 'Streamlit'],
-                    github: 'https://github.com/AnanyaHN27/RAG-Mistral-Snowflake'
+                    github: 'https://github.com/AnanyaHN27/Sparse-Autoencoder'
                   },
                   {
                     title: 'Snowflake and Mistral RAG n ROLL Hackathon: Environmental RAG Dashboard',
