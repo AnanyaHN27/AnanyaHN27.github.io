@@ -176,10 +176,8 @@ const Portfolio = () => {
                       <p className="text-lg text-gray-600">Ocado Technology</p>
                       <ul className="mt-2 text-lg text-gray-600 list-disc list-inside">
                       <li>Worked as a Data Scientist using Python, TensorFlow, and SQL to create Temporal Fusion Transformers (TFT), Recurrent Neural Networks (RNN), and Temporal Convolutional Networks (TCN) models for complex time-series forecasting of stock demand.</li>
-                      <li>Conducted A/B testing and statistical data analysis of model features for evaluation prior to deployment, updating relevant Looker Studio dashboards with key metrics.</li>
                       <li>Achieved 2nd place in an internal hackathon with an XGBoost model designed to flag incorrect SKU attributes and perform anomaly detection, achieving 87% recall using Computer Vision techniques.</li>
                       <li>Implemented a feature in production mathematical models using TensorFlow, saving £2 million over the Christmas period and improving performance over the baseline.</li>
-                      <li>Actively participated in in-house research groups, contributing to journal club discussions by reading academic research papers to learn new machine learning frameworks and optimization algorithms.</li>
                       </ul>
                     </div>
 
@@ -191,10 +189,8 @@ const Portfolio = () => {
                       <p className="text-lg text-gray-600">Ocado Technology</p>
                       <ul className="mt-2 text-lg text-gray-600 list-disc list-inside">
                       <li>Developed and optimized routing algorithms using Java, enhancing delivery efficiency in sparse geographies with Discrete Event Simulation.</li>
-                      <li>Led full-stack development, working with React to improve web app usability, reduce test runtimes by 65%, and increase code coverage from 82% to 98%.</li>
                       <li>Served as Tech Lead for integration projects, managing roadmaps, facilitating cross-team collaboration, and delivering key features that improved operational visibility in logistics with Python visualizations.</li>
                       <li>Implemented AI algorithms to optimize user experience and autowired a 100,000+ line Spring Boot codebase, boosting system performance.</li>
-                      <li>Engaged in client-facing presentations, designed APIs, and provided architectural guidance through large-scale Architectural Katas focused on microservices.</li>
                       </ul>
                     </div>
 
