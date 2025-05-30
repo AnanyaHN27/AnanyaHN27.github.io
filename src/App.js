@@ -361,7 +361,7 @@ const Portfolio = () => {
   <p>What started as a casual Python project turned into a mini exercise in writing cleaner, more intentional code. I learned a lot just by comparing my design decisions to someone else’s and asking why theirs felt more readable. Excited to keep iterating on it and maybe even add a bot next.</p>
                 </div>
                 </div>
-                
+
               <div className="bg-white rounded-xl shadow-lg p-8">
                 <h3 className="text-3xl font-semibold text-gray-800 mb-4">
                   Why I'm Starting This Blog 
@@ -388,7 +388,7 @@ const Portfolio = () => {
                   If you're prepping for Data Science or Data Engineering interviews, chances are you’ll need to get good at SQL. In my first role (and during a university DB class), I really struggled with it — I chalked it up to “my brain just not working that way.” Fast forward a few years, and I somehow landed an offer from Meta as a Data Engineer.
                 </p>
                 <p>
-                  That still feels surreal. Back in 2020, I completely tanked my first-year mock exams at Cambridge. I genuinely didn’t think a future like this was possible.
+                  That still feels surreal. Back in 2020, I remember looking at my supervision homework in total despair. I genuinely didn’t think a future like this was possible.
                 </p>
                 <p>
                   What changed? Two resources helped me the most:
@@ -398,7 +398,7 @@ const Portfolio = () => {
                   <li><strong>DataLemur (over Leetcode)</strong></li>
                 </ul>
                 <p>
-                  The Cambridge DB class was honestly not great. It focused on pseudocode and set-based logic rather than practical SQL. We never learned about PostgreSQL (which is the most popular paradigm in industry), or how to use `WHERE` vs `HAVING`, or even basic window functions. Instead, we were expected to jump straight from syntax to complex queries. Maybe that reflects more on how I learn, but it was a massive leap.
+                  I didn't enjoy the Cambridge 'Databases' course. It focused on pseudocode and set-based logic rather than practical SQL. We never learned about PostgreSQL (which is the most popular paradigm in industry), or how to use `WHERE` vs `HAVING`, or even basic window functions. Memory may be failing me here, but I don't recall feeling practically equipped.
                 </p>
                 <p>
                   In contrast, Alex Reinhart’s class was refreshingly hands-on. It emphasized incremental learning and practical problems. I highly recommend checking out his lecture notes on <a href="https://www.refsmmat.com">refsmmat.com</a>.
