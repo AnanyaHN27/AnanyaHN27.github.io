@@ -337,6 +337,31 @@ const Portfolio = () => {
           {activeSection === 'blog' && (
             <div className="space-y-8 animate-fadeIn">
               <h2 className="text-4xl font-bold text-gray-900">Blog</h2>
+                <div className="bg-white rounded-xl shadow-lg p-8">
+                <h3 className="text-3xl font-semibold text-gray-800 mb-4">
+                  Building a Wordle Clone (and Improving My Coding Skills) 
+                </h3>
+                <div className="text-gray-600 text-lg space-y-4">
+                  <p>When I first started building my Wordle clone, I dove right into a class-based implementation. I split things out into <code>Guesses</code> and <code>WordleString</code>, with each <code>WordleString</code> storing a list of tuples: an uppercase letter paired with a square colour indicator. It felt neat and logical at the time, and I liked how tightly each letter was bound to its display.</p>
+
+  <p>The actual gameplay loop lived in a separate file. It wasn’t wrapped in a class, which in hindsight made it less clean, but I wasn’t thinking about structure yet. Correction logic sat inside the <code>Guesses</code> class as a method called <code>correct</code>. I later realised that could have been turned into an <code>@property</code> called <code>is_correct</code>, since it was just checking the state, not changing anything.</p>
+
+  <p>I was using <code>GREEN = 1</code>, <code>YELLOW = 2</code>, <code>GREY = 3</code> to visualise colours, which worked fine for logic but didn’t make the game very fun to look at. I also stored my guesses in a dictionary, mapping guess number to guess, and incremented a <code>guess_no</code> counter to retrieve the latest one. This got clunky quickly. During that phase, I also reminded myself of how handy Python’s <code>any()</code> and <code>all()</code> methods are.</p>
+
+  <p>After seeing a more professional implementation (written by someone who’s likely a few career levels ahead), I made some changes. It shifted the way I was thinking about clean design.</p>
+
+  <p>First, I replaced the colour codes with actual <strong>emojis</strong>. I had never done that before in a terminal game, but it instantly made everything clearer and more satisfying to play. I leaned into <code>@property</code> to express things like <code>is_won</code> and <code>is_over</code> in a more Pythonic way. It meant I could check game status without calling functions, and the code read more naturally.</p>
+
+  <p>I also got rid of the dictionary I was using to store guesses. Lists are already ordered, and Python makes it easy to grab the last element with <code>[-1]</code>. That alone made the code easier to reason about and a bit less error-prone. I renamed <code>Guesses</code> to <code>Game</code>, which better reflects what the class is actually doing.</p>
+
+  <p>One of the biggest changes was dropping the tuple structure altogether. Instead of storing each guess as a list of <code>(letter, colour)</code> pairs, I now build up a fresh string each time a guess is evaluated. That string holds the emoji visualisation of the guess result. Not only does this reduce state bloat, but it also separates game logic from display logic more cleanly.</p>
+
+  <p>As a final polish, I spaced out the guess word so that each letter aligns directly over its emoji. It’s a small visual cue, but it makes the output feel more intuitive and closer to the Wordle experience.</p>
+
+  <p>What started as a casual Python project turned into a mini exercise in writing cleaner, more intentional code. I learned a lot just by comparing my design decisions to someone else’s and asking why theirs felt more readable. Excited to keep iterating on it and maybe even add a bot next.</p>
+                </div>
+                </div>
+                
               <div className="bg-white rounded-xl shadow-lg p-8">
                 <h3 className="text-3xl font-semibold text-gray-800 mb-4">
                   Why I'm Starting This Blog 
