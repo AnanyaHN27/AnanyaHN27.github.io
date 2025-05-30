@@ -348,7 +348,7 @@ const Portfolio = () => {
 
   <p>I was using <code>GREEN = 1</code>, <code>YELLOW = 2</code>, <code>GREY = 3</code> to visualise colours, which worked fine for logic but didn’t make the game very fun to look at. I also stored my guesses in a dictionary, mapping guess number to guess, and incremented a <code>guess_no</code> counter to retrieve the latest one. This got clunky quickly. During that phase, I also reminded myself of how handy Python’s <code>any()</code> and <code>all()</code> methods are.</p>
 
-  <p>After seeing a more professional implementation (written by someone who’s likely a few career levels ahead), I made some changes. It shifted the way I was thinking about clean design.</p>
+  <p>After seeing more professional implementations, I made some changes. It shifted the way I was thinking about clean design, without totally coloring my thought process.</p>
 
   <p>First, I replaced the colour codes with actual <strong>emojis</strong>. I had never done that before in a terminal game, but it instantly made everything clearer and more satisfying to play. I leaned into <code>@property</code> to express things like <code>is_won</code> and <code>is_over</code> in a more Pythonic way. It meant I could check game status without calling functions, and the code read more naturally.</p>
 
